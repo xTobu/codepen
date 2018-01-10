@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paste Logo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.7.20/fabric.min.js"></script>
+    <style>
+        canvas {
+            border: solid 1px #000
+        }
+    </style>
+</head>
+
+<body>
+    <input type="file" id="upload" value="" accept="image/png,image/jpeg,image/jpg,">
+    <a class="minus" href="#">
+        <span></span>
+    </a>
+
+    <canvas id="finBox" class="finBox"></canvas>
+
+    <div class="options" style="display:none">
+        <input type="button" class="minus" value="-">
+        <input type="range" min="0" max="6" step="1" class="slider">
+        <input type="button" class="plus" value="+"></input>
+    </div>
+
+    <script src="./js/PasteLogo.js"></script>
+</body>
+
+</html>
