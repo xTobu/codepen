@@ -233,9 +233,7 @@ var Validation = {
 
 		return req;
 	},
-	Init: function() {
-		console.log(Validation.Rule);
-	},
+	Init: function() {},
 };
 
 $(function() {
