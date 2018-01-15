@@ -1,0 +1,55 @@
+* {
+	font-family: 'Helvetica Neue', arial, sans-serif;
+}
+div {
+	border-radius: 5px;
+}
+div.container {
+	width: 55%;
+	margin: 80px auto 0;
+}
+div.controls {
+	padding: 2%;
+	background: #ccc;
+}
+div.controls div.contentFilter,
+div.controls div.contentSort {
+	padding: 1%;
+}
+.btn {
+	display: inline-block;
+	padding: 0.4em 0.8em;
+	background: #666;
+	border: 0;
+	color: #ddd;
+	font-size: 16px;
+	font-weight: 300;
+	cursor: pointer;
+	border-radius: 5px;
+}
+.btn.active {
+	background: #222;
+}
+.btn:hover {
+	background: #222;
+}
+
+ul {
+	list-style: none;
+}
+li {
+	width: 25%;
+	margin: 25px;
+	display: inline-block;
+	border-radius: 5px;
+}
+
+.category-1 {
+	border: solid 3px rgb(0, 133, 60);
+}
+.category-2 {
+	border: solid 3px rgb(34, 15, 202);
+}
+.category-3 {
+	border: solid 3px coral;
+}
