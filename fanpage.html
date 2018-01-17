@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+
+            // https://graph.facebook.com/242305665805605/feed?fields=shares.summary(true),created_time&limit=100&until=1516204800&since=1516118400&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD
+
+            $.ajax({
+                url: "https://graph.facebook.com/242305665805605/feed?fields=shares.summary(true),created_time&limit=100&until=1516204800&since=1516118400&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD",
+                type: "get",
+                async: true,
+                dataType: 'json',
+
+                success: function (data) {
+                    var total = 0
+                    $.each(data.data, function (key, value) {
+                        if (value.shares) {
+                            //console.log(key + ": " + value.shares.count);
+                            total += value.shares.count;
+                        }
+                    });
+                    console.log('Shares:', total)
+                },
+                error: function (data) {
+
+                }
+            });
+            $.ajax({
+                url: "https://graph.facebook.com/242305665805605/feed?fields=likes.summary(true),created_time&limit=100&until=1516204800&since=1516118400&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD",
+                type: "get",
+                async: true,
+                dataType: 'json',
+
+                success: function (data) {
+                    var total = 0
+                    // console.log(data.data);
+                    $.each(data.data, function (key, value) {
+                        if (value.likes) {
+                            // console.log(key + ": " + value.likes.summary.total_count);
+                            total += value.likes.summary.total_count;
+                        }
+                    });
+                    console.log('Likes:', total)
+                },
+                error: function (data) {
+
+                }
+            });
+            $.ajax({
+                url: "https://graph.facebook.com/242305665805605/feed?fields=comments.summary(true),created_time&limit=100&until=1516204800&since=1516118400&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD",
+                type: "get",
+                async: true,
+                dataType: 'json',
+
+                success: function (data) {
+                    var total = 0
+                    console.log(data.data);
+                    $.each(data.data, function (key, value) {
+                        if (value.comments) {
+                            // console.log(key + ": " + value.comments.summary.total_count);
+                            total += value.comments.summary.total_count;
+                        }
+                    });
+                    console.log('Comments:', total)
+                },
+                error: function (data) {
+
+                }
+            });
+
+            Date.prototype.addDays = function (days) {
+                var dat = new Date(this.valueOf());
+                dat.setDate(dat.getDate() + days);
+                return dat;
+            }
+            console.log('Tomorrow:', new Date().addDays(1).toISOString().substring(0, 10))
+            console.log('Today:', new Date().toISOString().substring(0, 10))
+            console.log('Today-1:', new Date().addDays(-1).toISOString().substring(0, 10))
+            console.log('Today-2:', new Date().addDays(-2).toISOString().substring(0, 10))
+            console.log('Today-3:', new Date().addDays(-3).toISOString().substring(0, 10))
+            console.log('Today-4:', new Date().addDays(-4).toISOString().substring(0, 10))
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

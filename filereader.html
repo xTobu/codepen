@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Filereader</title>
+</head>
+
+<body>
+    <input type="button" value="submit">
+    <input type="file" accept="application/pdf">
+
+    <script>
+        var fileReader = new FileReader();
+        fileReader.onload = function (evt) {
+            console.log(fileReader.result)
+        }
+        document.querySelector("input[type=button]").addEventListener("click", function () {
+            var upload = document.querySelector("input[type=file]").files[0];
+            if (upload) {
+                fileReader.readAsArrayBuffer(upload);
+            }
+            else {
+                alert('未選擇')
+            }
+        });
+    </script>
+</body>
+
+</html>
