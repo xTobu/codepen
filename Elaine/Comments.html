@@ -12,198 +12,165 @@
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
     <script src="./utils.js"></script>
-    <style>
-        body {
-            text-align: center;
-            font-family: 'Microsoft JhengHei', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-        }
-
-        div.wrap {
-            width: 100%;
-            margin: 0 auto;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        ul.chart li {
-            width: 44%;
-            margin: 25px;
-            display: inline-block;
-            border-radius: 5px;
-        }
-
-        ul.category>li {
-            width: 15%;
-            margin: 25px;
-            display: inline-block;
-            border-radius: 5px;
-        }
-     
-        h1 {
-            cursor: pointer
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="wrap">
         <h1>Comments</h1>
         <div class="detail" style="display:none">
-                <ul class="category">
-                    <li>
-                        <h3>UNIQLO</h3>
-                        <ul class="uniqlo">
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>GapTW</h3>
-                        <ul class="gap">
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>Zara</h3>
-                        <ul class="zara">
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <h3>HM</h3>
-                        <ul class="hm">
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                            <li>
-                                <span class="day"></span>：
-                                <span class="count"></span>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-            <ul class="chart">
+            <ul class="category">
+                <li>
+                    <h3>UNIQLO</h3>
+                    <ul class="uniqlo">
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>GapTW</h3>
+                    <ul class="gap">
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>Zara</h3>
+                    <ul class="zara">
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>HM</h3>
+                    <ul class="hm">
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                        <li>
+                            <span class="day"></span>：
+                            <span class="count"></span>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <ul class="chart">
             <li>
                 <div class="UNIQLO">
                 </div>
@@ -329,7 +296,7 @@
             }
 
 
-            function Create(target, id,callback) {
+            function Create(target, id, callback) {
                 var container = document.querySelector('.' + target);
                 var div = document.createElement('div');
                 div.classList.add('chart-container');
@@ -449,7 +416,7 @@
                     });
                     $('.detail').toggle();
                 })
-               
+
             };
         </script>
 

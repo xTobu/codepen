@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    font-family: 'Microsoft JhengHei', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+}
+
+div.wrap {
+    width: 100%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul.chart li {
+    width: 44%;
+    margin: 25px;
+    display: inline-block;
+    border-radius: 5px;
+}
+li>span{
+    display: inline-block;
+    width: 45px;
+    text-align: left;
+}
+ul.category>li {
+    width: 15%;
+    margin: 25px;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+h1 {
+    cursor: pointer
+}
