@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comments</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.bundle.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
+    <script src="./utils.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Microsoft JhengHei', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+        }
+
+        div.wrap {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul.chart li {
+            width: 44%;
+            margin: 25px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        ul.category>li {
+            width: 15%;
+            margin: 25px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+     
+        h1 {
+            cursor: pointer
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <h1>Comments</h1>
+        <div class="detail" style="display:none">
+                <ul class="category">
+                    <li>
+                        <h3>UNIQLO</h3>
+                        <ul class="uniqlo">
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>GapTW</h3>
+                        <ul class="gap">
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>Zara</h3>
+                        <ul class="zara">
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>HM</h3>
+                        <ul class="hm">
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                            <li>
+                                <span class="day"></span>：
+                                <span class="count"></span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <ul class="chart">
+            <li>
+                <div class="UNIQLO">
+                </div>
+            </li>
+            <li>
+                <div class="GapTW">
+                </div>
+            </li>
+            <li>
+                <div class="Zara">
+                </div>
+            </li>
+            <li>
+                <div class="HM">
+                </div>
+            </li>
+        </ul>
+        <div class="ETtoday" style="display:none">
+        </div>
+
+
+
+
+
+        <script>
+            Chart.defaults.global.defaultFontSize = 16;
+            Chart.defaults.global.defaultFontFamily = "'Microsoft JhengHei','Helvetica Neue', 'Helvetica', 'Arial', sans-serif";
+
+            Chart.pluginService.register({
+                beforeRender: function (chart) {
+
+                    if (chart.config.options.showAllTooltips) {
+                        // create an array of tooltips
+                        // we can't use the chart tooltip because there is only one tooltip per chart
+                        chart.pluginTooltips = [];
+                        chart.config.data.datasets.forEach(function (dataset, i) {
+                            chart.getDatasetMeta(i).data.forEach(function (sector, j) {
+                                chart.pluginTooltips.push(new Chart.Tooltip({
+                                    _chart: chart.chart,
+                                    _chartInstance: chart,
+                                    _data: chart.data,
+                                    _options: chart.options.tooltips,
+                                    _active: [sector]
+                                }, chart));
+                            });
+                        });
+
+                        // turn off normal tooltips
+                        chart.options.tooltips.enabled = false;
+                    }
+                },
+                afterDraw: function (chart, easing) {
+                    if (chart.config.options.showAllTooltips) {
+                        // we don't want the permanent tooltips to animate, so don't do anything till the animation runs atleast once
+                        if (!chart.allTooltipsOnce) {
+                            if (easing !== 1)
+                                return;
+                            chart.allTooltipsOnce = true;
+                        }
+
+                        // turn on tooltips
+                        chart.options.tooltips.enabled = true;
+                        Chart.helpers.each(chart.pluginTooltips, function (tooltip) {
+                            tooltip.initialize();
+                            tooltip.update();
+                            // we don't actually need this since we are not animating tooltips
+                            tooltip.pivot();
+                            tooltip.transition(easing).draw();
+                        });
+                        chart.options.tooltips.enabled = false;
+                    }
+                }
+            });
+
+            function createConfig(brand, data) {
+                return {
+                    type: 'bar',
+                    data: {
+                        labels: arrayLabels,
+                        datasets: [
+                            {
+                                label: 'Comments',
+                                borderColor: window.chartColors.blue,
+                                backgroundColor: window.chartColors.blue,
+                                data: data,
+                                fill: false,
+                            }
+                        ]
+                    },
+                    options: {
+                        // showAllTooltips: true,
+                        //關閉LABEL
+                        legend: {
+                            display: false
+                        },
+                        responsive: true,
+                        title: {
+                            display: true,
+                            text: brand
+                        },
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero: true
+                                }
+                            }]
+                        },
+                        tooltips: {
+                            position: 'nearest',
+                            mode: 'index',
+                            intersect: false,
+                            yPadding: 10,
+                            xPadding: 10,
+                            caretSize: 8,
+                            backgroundColor: '#ccc',
+                            titleFontColor: window.chartColors.black,
+                            bodyFontColor: window.chartColors.black,
+                            borderColor: '#ccc',
+                            borderWidth: 2
+                        },
+                    }
+                };
+            }
+
+
+            function Create(target, id,callback) {
+                var container = document.querySelector('.' + target);
+                var div = document.createElement('div');
+                div.classList.add('chart-container');
+
+                var canvas = document.createElement('canvas');
+                div.appendChild(canvas);
+                container.appendChild(div);
+
+                var ctx = canvas.getContext('2d');
+                dataComments(id, function (data) {
+                    var config = createConfig(target, data);
+                    new Chart(ctx, config);
+                    callback(data)
+                })
+
+            }
+
+            var arrAll = {};
+            window.onload = function () {
+
+
+
+                Create('ETtoday', "242305665805605", function (r) {
+                    arrAll.Etoday = r;
+                    // console.log(arrETtoday)
+                });
+                Create('UNIQLO', "140574649321224", function (r) {
+                    arrAll.UNIQLO = r;
+                    // console.log(arrUNIQLO)
+                });
+                Create('GapTW', "714700031898218", function (r) {
+                    arrAll.GapTW = r;
+                    //console.log(arrGapTW)
+                });
+                Create('Zara', "33331950906", function (r) {
+                    arrAll.Zara = r;
+                    //console.log(arrZara)
+                });
+                Create('HM', "201098527069083", function (r) {
+                    arrAll.HM = r;
+                    // console.log(arrHM)
+                });
+                // CreateShare('.containerLike');
+
+                $('h1').on('click', function (e) {
+                    e.preventDefault();
+                    $('ul.uniqlo').find('span.day').each(function (index) {
+                        if (index == 7) {
+                            $(this).text('總數');
+                            return;
+                        }
+                        $(this).text(arrayLabels[index])
+                    });
+                    var total_uniqlo = 0;
+                    $('ul.uniqlo').find('span.count').each(function (index) {
+                        if (index == 7) {
+                            $(this).text(total_uniqlo);
+                            return;
+                        }
+                        $(this).text(arrAll.UNIQLO[index])
+                        total_uniqlo += arrAll.UNIQLO[index];
+                    });
+
+
+
+                    $('ul.gap').find('span.day').each(function (index) {
+                        if (index == 7) {
+                            $(this).text('總數');
+                            return;
+                        }
+                        $(this).text(arrayLabels[index])
+                    });
+                    var total_gap = 0;
+                    $('ul.gap').find('span.count').each(function (index) {
+                        if (index == 7) {
+                            $(this).text(total_gap);
+                            return;
+                        }
+                        $(this).text(arrAll.GapTW[index])
+                        total_gap += arrAll.GapTW[index];
+                    });
+
+
+                    $('ul.zara').find('span.day').each(function (index) {
+                        if (index == 7) {
+                            $(this).text('總數');
+                            return;
+                        }
+                        $(this).text(arrayLabels[index])
+                    });
+                    var total_zara = 0;
+                    $('ul.zara').find('span.count').each(function (index) {
+                        if (index == 7) {
+                            $(this).text(total_zara);
+                            return;
+                        }
+                        $(this).text(arrAll.Zara[index])
+                        total_zara += arrAll.Zara[index];
+                    });
+
+
+                    $('ul.hm').find('span.day').each(function (index) {
+                        if (index == 7) {
+                            $(this).text('總數');
+                            return;
+                        }
+                        $(this).text(arrayLabels[index])
+                    });
+                    var total_hm = 0;
+                    $('ul.hm').find('span.count').each(function (index) {
+                        if (index == 7) {
+                            $(this).text(total_hm);
+                            return;
+                        }
+                        $(this).text(arrAll.HM[index])
+                        total_hm += arrAll.HM[index];
+                    });
+                    $('.detail').toggle();
+                })
+               
+            };
+        </script>
+
+</body>
+
+</html>
