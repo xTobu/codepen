@@ -26,6 +26,7 @@ $(function() {
 	$('#since').datepicker({
         dateFormat: 'yy-mm-dd',
         maxDate: "-1d",
+        minDate: "-1y",
 		onSelect: function(dateText) {
 			Data.since = new Date(dateText).addHours(-8).toISOString();
 			//console.log(Data.since);
@@ -35,6 +36,7 @@ $(function() {
 	$('#until').datepicker({
         dateFormat: 'yy-mm-dd',
         maxDate: "+0d",
+        minDate: "-1y",
 		onSelect: function(dateText) {
 			Data.until = new Date(dateText).addHours(-8).toISOString();
 			//console.log(Data.until);
@@ -97,6 +99,7 @@ var countShare = function(brand, since, until, callback) {
 		'&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD';
 	console.log(url);
 	var loopGet = function(url) {
+        set();
 		$.ajax({
 			url: url,
 			type: 'get',
@@ -170,6 +173,7 @@ var countLike = function(brand, since, until, callback) {
 		'&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD';
 	console.log(url);
 	var loopGet = function(url) {
+        set();
 		$.ajax({
 			url: url,
 			type: 'get',
@@ -243,6 +247,7 @@ var countComment = function(brand, since, until, callback) {
 		'&access_token=EAAF5GSgzXNsBAChO1ZCCKNWrkNBV12taQKuLQzBEiTVOFufkIAVhTZBaMoJcCwz9kukFNxGVbbXxvGZCscZBEy43OrcpyZCHln9JjGlpZClsdkBRJn45Jak5ZAZBwxYfga8K6htQDfQ9j79mM9P2oYyJB7QJ9kFI7d7QjhxY28HbmgZDZD';
 	console.log(url);
 	var loopGet = function(url) {
+        set();
 		$.ajax({
 			url: url,
 			type: 'get',
