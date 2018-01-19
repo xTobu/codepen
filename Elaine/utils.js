@@ -5,6 +5,11 @@ Date.prototype.addDays = function(days) {
 	return dat;
 };
 
+Date.prototype.addHours = function(h){
+    this.setHours(this.getHours()+h);
+    return this;
+}
+
 function getDate(count) {
 	return new Date()
 		.addDays(count)
@@ -220,4 +225,5 @@ function dataComments(target, callback) {
 		});
 	});
 }
+
 
