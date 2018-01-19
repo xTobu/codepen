@@ -59,6 +59,6 @@ ul.controls li>span{
 ul.controls li>input{
     text-align: center ;   
 }
-h1 {
-    /* cursor: pointer */
+h4.finish {
+    border-bottom: 3px solid #57c4d0;
 }

@@ -44,7 +44,9 @@ $(function() {
 	});
 
 	$('input.search').on('click', function(e) {
-		e.preventDefault();
+        e.preventDefault();
+        $('h4').removeClass('finish');
+        $('h4').text('0');
 		if (!Data.since || !Data.until) {
 			alert('有欄位沒填');
 			return;
@@ -297,52 +299,64 @@ function fourCounting() {
 	countShare('uniqlo', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(0).addClass('finish')
 	});
 	countShare('gap', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(1).addClass('finish')
 	});
 	countShare('zara', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(2).addClass('finish')
 	});
 	countShare('hm', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(3).addClass('finish')
 	});
 
 	countLike('uniqlo', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(4).addClass('finish')
 	});
 	countLike('gap', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(5).addClass('finish')
 	});
 	countLike('zara', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(6).addClass('finish')
 	});
 	countLike('hm', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(7).addClass('finish')
 	});
 
 	countComment('uniqlo', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(8).addClass('finish')
 	});
 	countComment('gap', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(9).addClass('finish')
 	});
 	countComment('zara', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(10).addClass('finish')
 	});
 	countComment('hm', Data.since, Data.until, function(r) {
         //console.log(r);
         set();
+        $('h4').eq(11).addClass('finish')
 	});
 }
 
