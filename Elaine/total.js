@@ -29,7 +29,7 @@ $(function() {
         minDate: "-1y",
 		onSelect: function(dateText) {
 			Data.since = new Date(dateText).addHours(-8).toISOString();
-			//console.log(Data.since);
+			console.log(Data.since);
 		},
 	});
 
@@ -39,7 +39,7 @@ $(function() {
         minDate: "-1y",
 		onSelect: function(dateText) {
 			Data.until = new Date(dateText).addHours(-8).toISOString();
-			//console.log(Data.until);
+			console.log(Data.until);
 		},
 	});
 
@@ -167,7 +167,7 @@ var countLike = function(brand, since, until, callback) {
 		'https://graph.facebook.com/' +
 		id +
 		'/feed?fields=' +
-		'likes' +
+		'reactions' +
 		'.summary(true),created_time&limit=100&since=' +
 		since +
 		'&until=' +
@@ -183,9 +183,9 @@ var countLike = function(brand, since, until, callback) {
 			dataType: 'json',
 			success: function(data) {
 				$.each(data.data, function(key, value) {
-					if (value.likes) {
+					if (value.reactions) {
 						// console.log(key + ": " + value.likes.summary.total_count);
-						Data[brand].likes += value.likes.summary.total_count;
+						Data[brand].likes += value.reactions.summary.total_count;
 					}
 				});
 
@@ -206,8 +206,8 @@ var countLike = function(brand, since, until, callback) {
 
 		success: function(data) {
 			$.each(data.data, function(key, value) {
-				if (value.likes) {
-					Data[brand].likes += value.likes.summary.total_count;
+				if (value.reactions) {
+					Data[brand].likes += value.reactions.summary.total_count;
 				}
 			});
 			if (data.paging&&data.paging.next) {
